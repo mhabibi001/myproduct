@@ -22,4 +22,9 @@ public class ProductService {
     public Product createProduct(Product product) {
         return productRepository.save(product);
     }
+
+    public List<Product> getProductsByName(String name) {
+        return productRepository.findByName(name);
+    }
+
 }
